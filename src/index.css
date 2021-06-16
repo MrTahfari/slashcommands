@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .link {
+        @apply hover:underline text-discord;
+    }
+    .card {
+        @apply focus:outline-none mt-2 rounded-2xl cursor-pointer text-white;
+    }
+    .cmd-card {
+        @apply ml-4 mr-4 md:ml-0 md:mr-0;
+    }
+    button:disabled {
+        @apply opacity-50 cursor-not-allowed;
+    }
+    .toggle-checkbox:checked {
+        @apply right-0 border-discord;
+    }
+    .toggle-checkbox:checked + .toggle-label {
+        @apply bg-discord;
+    }
+}
+
+.toggle-checkbox {
+    outline: none;
+}
+
+html {
+    background-color: #2f3136;
+    color: white;
+    height: 100%;
+}
+
+nav {
+    background-color: #202225;
+}
+
+body {
+    min-height: 100vh;
+}
+
+#app {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.footer {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+input {
+    background-color: #373c42;
+    width: 100%;
+}
+
+.card {
+    padding: 20px;
+    border-width: 2px;
+    border-color: transparent;
+}
+.card:focus {
+    border-color: white;
+}
+.card:hover {
+    border-color: white;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #fff !important;
+}
+
+.ps {
+    height: calc(90%);
+    display: grid;
+    width: 100%;
+}
